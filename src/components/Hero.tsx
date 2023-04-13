@@ -1,6 +1,6 @@
 function Hero() {
 	return (
-		<div className="hero">
+		<section className="hero">
 			<img
 				src="/src/assets/media/big-hero-bg.png"
 				alt="hero-bg"
@@ -28,7 +28,7 @@ function Hero() {
 				alt="bmw-bg"
 				className="hero-bmw-bg"
 			/>
-		</div>
+		</section>
 	);
 }
 
