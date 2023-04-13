@@ -3,6 +3,11 @@
 	--green: rgb(13, 187, 13);
 }
 
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
 .App {
 	display: flex;
 	justify-content: center;
@@ -27,11 +32,11 @@
 	top: 0;
 	right: 0;
 	z-index: 1;
+	background-size: cover;
 }
 
 .hero-content {
 	width: 100%;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -52,6 +57,7 @@
 }
 
 .hero-content-text p {
+	margin-top: 4rem;
 	text-shadow: 0.05rem 0.05rem 0.05rem white;
 }
 
@@ -119,3 +125,43 @@ h4 {
 	border: 0.2rem solid black;
 	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.60);
 }
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-top: 2rem;
+	flex-flow: row wrap;
+}
+
+nav ul li {
+    margin: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	border: rgb(13, 187, 13) solid 0.1rem;
+	padding: 0.7rem;
+	background-color: var(--green);
+	color: white;
+	border-radius: 2rem;
+
+	/* browser compatibility */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition: .5s;
+}
+
+nav ul li a:hover {
+	background-color: white;
+	color: black;
+	border: rgb(13, 187, 13) solid 0.1rem;
+}
+
+
+
