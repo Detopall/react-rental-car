@@ -9,8 +9,7 @@ function Hero() {
 			<div className="hero-content">
 				<div className="hero-content-text">
 					<h4>
-						Choose a car
-						<span className="hero-for-you"> for you </span>
+						Choose <span className="hero-for-you"> your </span>  next car
 					</h4>
 					<p>
 						Rent your next car now. Predictable prices, flexible
