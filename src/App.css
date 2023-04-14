@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@500&display=swap');
+
 :root {
 	--text-gray: #706f7b;
 	--green: rgb(13, 187, 13);
@@ -49,7 +51,6 @@
 	flex-direction: column;
 	z-index: 3;
 	max-width: 50rem;
-	margin-top: 5rem;
 	color: var(--text-gray);
 	font-weight: bold;
 	font-size: 1rem;
@@ -60,9 +61,8 @@
 	text-shadow: 0.05rem 0.05rem 0.05rem white;
 }
 
-h4 {
+.hero-content-text h4 {
 	font-size: 5.2rem;
-	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	color: black;
 	margin-bottom: 2.3rem;
@@ -141,10 +141,8 @@ nav ul li a {
 	text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
-	border: rgb(13, 187, 13) solid 0.1rem;
 	padding: 0.7rem;
-	background-color: var(--green);
-	color: white;
+	color: black;
 	border-radius: 2rem;
 
 	/* browser compatibility */
@@ -156,9 +154,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	background-color: white;
-	color: black;
-	border: rgb(13, 187, 13) solid 0.1rem;
+	color: var(--green);
 }
 
 .book-a-car {
@@ -265,25 +261,36 @@ nav ul li a:hover {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
 	overflow-y: auto;
+	height: 80%;
+	background-color: #FFFFFF;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .modal .title-container {
-	background-color: lightgrey;
+	background-color: black;
+	color: white;
 	padding: 0.5rem;
 	display: flex;
 	gap: 20rem;
 	align-items: center;
 	justify-content: space-between;
 	border-radius: 0.5rem;
+	padding: 0 2rem;
 }
 
 .modal .title-container button {
 	cursor: pointer;
+	padding: 0 0.5rem;
 }
 
 .modal .footer {
-	background-color: lightgrey;
+	background-color: black;
 	padding: 1rem;
 	display: flex;
 	justify-content: flex-end;
@@ -293,6 +300,7 @@ nav ul li a:hover {
 #reserve-car {
 	padding: 0.5rem;
 	border: 0.1rem solid var(--green);
+	color: white;
 	background-color: var(--green);
 	border-radius: 0.5rem;
 	font-size: 1.2rem;
@@ -308,9 +316,44 @@ nav ul li a:hover {
 	font-weight: bold;
 }
 
-.modal-container {
-	background-color: #FFFFFF;
-	padding: 2rem;
+.modal .body {
+	display: flex;
+	justify-content: center;
+	gap: 50%;
+}
+
+.modal-location-dates {
+	display: flex;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+	margin-bottom: 2rem;
+}
+
+.modal-location-dates-item {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.modal-location-dates-item span {
+	color: #777;
+}
+
+.modal-location-dates-item h4, .modal-location-dates h3 {
+	margin-bottom: 0;
+}
+
+.modal-img {
+	width: 30%;
+	height: 30%;
+}
+
+.modal-img h3 span {
+	color: var(--green)
+}
+
+.modal-img img {
+	width: 100%;
+	height: auto;
 	border-radius: 0.5rem;
-	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }

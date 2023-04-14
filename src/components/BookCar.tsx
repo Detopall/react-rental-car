@@ -1,7 +1,7 @@
 import Modal from "./Modal";
 import { useState } from "react";
 
-interface BookCar {
+export interface IBookCar {
 	carType: string;
 	pickUpLocation: string;
 	dropOffLocation: string;
@@ -17,6 +17,13 @@ function convertTimeStampToDate(element: HTMLInputElement): string {
 
 export function BookCar() {
 	const [openModal, setOpenModal] = useState(false);
+	const [carInfo, setCarInfo] = useState<IBookCar>({
+		carType: "",
+		pickUpLocation: "",
+		dropOffLocation: "",
+		pickUpDate: "",
+		dropOffDate: ""
+	  });
 
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		if (e) e.preventDefault();
@@ -36,7 +43,7 @@ export function BookCar() {
 			document.querySelector("#drop-off-date") as HTMLInputElement
 		);
 
-		const carInfo: BookCar = {
+		const carInfo: IBookCar = {
 			carType,
 			pickUpLocation,
 			dropOffLocation,
@@ -45,6 +52,7 @@ export function BookCar() {
 		};
 
 		if (!carInfo) return;
+		setCarInfo(carInfo);
 		setOpenModal(true);
 	}
 
@@ -59,11 +67,11 @@ export function BookCar() {
 						</label>
 						<select id="select-car-type" required >
 							<option value="">Select your car type</option>
-							<option value="bmw">BMW</option>
-							<option value="chevrolet">Chevrolet</option>
-							<option value="mercedes">Mercedes</option>
-							<option value="mustang">Mustang</option>
-							<option value="volvo">Volvo</option>
+							<option value="BMW">BMW</option>
+							<option value="Chevrolet">Chevrolet</option>
+							<option value="Mercedes">Mercedes</option>
+							<option value="Mustang">Mustang</option>
+							<option value="Volvo">Volvo</option>
 						</select>
 					</div>
 					<div className="book-form car-pick-up-location">
@@ -111,7 +119,7 @@ export function BookCar() {
 					</div>
 				</form>
 			</section>
-			{openModal && <Modal closeModal={() => setOpenModal(false)} />}
+			{openModal && <Modal carInfo={carInfo} closeModal={() => setOpenModal(false)} />}
 		</>
 	);
 }
