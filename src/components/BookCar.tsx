@@ -1,8 +1,42 @@
+interface BookCar {
+	carType: string;
+	pickUpLocation: string;
+	dropOffLocation: string;
+	pickUpDate: string;
+	dropOffDate: string;
+}
+
+function convertTimeStampToDate(element: HTMLInputElement):string {
+	return "";
+}
+
+function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+	if (e) e.preventDefault();
+	const carType = document.querySelector("#select-car-type") as HTMLSelectElement;
+	const pickUpLocation = document.querySelector(
+		"#pick-up-location"
+	) as HTMLSelectElement;
+	const dropOffLocation = document.querySelector(
+		"#drop-off-location"
+	) as HTMLSelectElement;
+	const pickUpDate = document.querySelector("#pick-up-date") as HTMLInputElement;
+	const dropOffDate = document.querySelector("#drop-off-date") as HTMLInputElement;
+
+
+	// const carInfo: BookCar = {
+	// 	carType, pickUpLocation, dropOffLocation, pickUpDate, dropOffDate
+	// }
+
+	// if (!carInfo) return;
+
+	//console.log(carInfo);
+}
+
 export function BookCar() {
 	return (
 		<section className="book-a-car">
 			<h2> Book a car</h2>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<div className="book-form car-type">
 					<label htmlFor="select-car-type">Select Your Car </label>
 					<select id="select-car-type">
