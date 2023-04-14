@@ -42,9 +42,15 @@ export function BookCar() {
 				</div>
 				<div className="book-form car-drop-off-date">
 					<label htmlFor="drop-off-date">Drop-Off Date</label>
-					<input type="date" name="drop-off-date" id="drop-off-date" />
+					<input
+						type="date"
+						name="drop-off-date"
+						id="drop-off-date"
+					/>
 				</div>
-				<button type="submit">Search</button>
+				<div className="book-form car-submit">
+					<button type="submit">Search</button>
+				</div>
 			</form>
 		</section>
 	);
