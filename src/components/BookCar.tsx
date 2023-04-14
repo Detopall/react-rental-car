@@ -1,7 +1,7 @@
 export function BookCar() {
 	return (
 		<section className="book-a-car">
-			<h2> Book car</h2>
+			<h2> Book a car</h2>
 			<form>
 				<div className="book-form car-type">
 					<label htmlFor="select-car-type">Select Your Car </label>

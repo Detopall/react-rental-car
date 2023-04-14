@@ -3,7 +3,6 @@
 	--green: rgb(13, 187, 13);
 }
 
-
 * {
 	font-family: "Poppins", sans-serif;
 }
@@ -87,20 +86,19 @@ h4 {
 	font-size: 1.5rem;
 }
 
-
 .hero-buttons a {
 	text-decoration: none;
 	border-radius: 2rem;
 	color: white;
 	padding: 1rem 1.5rem;
 	box-shadow: 0 10px 15px 0 rgba(71, 71, 71, 0.25);
-	
+
 	/* browser compatibility */
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition: .5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
 }
 
 .hero-buttons a:nth-of-type(1) {
@@ -115,7 +113,7 @@ h4 {
 
 .hero-buttons a:nth-of-type(1):hover {
 	background-color: green;
-	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.60);
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.6);
 	border: 0.2rem solid green;
 }
 
@@ -123,24 +121,24 @@ h4 {
 	background-color: white;
 	color: black;
 	border: 0.2rem solid black;
-	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.60);
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.6);
 }
 
 nav ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	margin-top: 2rem;
 	flex-flow: row wrap;
 }
 
 nav ul li {
-    margin: 1.5rem;
+	margin: 1.5rem;
 }
 
 nav ul li a {
-    text-decoration: none;
+	text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
 	border: rgb(13, 187, 13) solid 0.1rem;
@@ -150,11 +148,11 @@ nav ul li a {
 	border-radius: 2rem;
 
 	/* browser compatibility */
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition: .5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
 }
 
 nav ul li a:hover {
@@ -163,5 +161,57 @@ nav ul li a:hover {
 	border: rgb(13, 187, 13) solid 0.1rem;
 }
 
+.book-a-car {
+	margin-top: 2.5rem;
+	padding: 2rem;
+	width: 90%;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 5rem;
+	background-image: url("/src/assets/media/wood-grain.png");
+	background-size: cover;
+	z-index: 4;
+}
 
+.book-a-car h2 {
+	font-size: 2rem;
+}
 
+.book-a-car form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 30px 30px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"car-type car-pick-up-location"
+		"car-drop-off-location car-pick-up-date"
+		"car-drop-off-date .";
+}
+
+.car-type {
+	grid-area: car-type;
+}
+
+.car-pick-up-location {
+	grid-area: car-pick-up-location;
+}
+
+.car-drop-off-location {
+	grid-area: car-drop-off-location;
+}
+
+.car-pick-up-date {
+	grid-area: car-pick-up-date;
+}
+
+.car-drop-off-date {
+	grid-area: car-drop-off-date;
+}
+
+.book-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	gap: 1rem;
+}
