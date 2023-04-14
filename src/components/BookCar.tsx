@@ -6,30 +6,41 @@ interface BookCar {
 	dropOffDate: string;
 }
 
-function convertTimeStampToDate(element: HTMLInputElement):string {
-	return "";
+function convertTimeStampToDate(element: HTMLInputElement): string {
+	return new Date(element.valueAsNumber).toLocaleDateString().split(" ")[0];
+
+	// ex.: 1624462153 => '6/23/2021, 5:29:13 PM' => '6/23/2021'
 }
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 	if (e) e.preventDefault();
-	const carType = document.querySelector("#select-car-type") as HTMLSelectElement;
-	const pickUpLocation = document.querySelector(
-		"#pick-up-location"
-	) as HTMLSelectElement;
-	const dropOffLocation = document.querySelector(
-		"#drop-off-location"
-	) as HTMLSelectElement;
-	const pickUpDate = document.querySelector("#pick-up-date") as HTMLInputElement;
-	const dropOffDate = document.querySelector("#drop-off-date") as HTMLInputElement;
+	const carType = (
+		document.querySelector("#select-car-type") as HTMLSelectElement
+	).value;
+	const pickUpLocation = (
+		document.querySelector("#pick-up-location") as HTMLSelectElement
+	).value;
+	const dropOffLocation = (
+		document.querySelector("#drop-off-location") as HTMLSelectElement
+	).value;
+	const pickUpDate = convertTimeStampToDate(
+		document.querySelector("#pick-up-date") as HTMLInputElement
+	);
+	const dropOffDate = convertTimeStampToDate(
+		document.querySelector("#drop-off-date") as HTMLInputElement
+	);
 
+	const carInfo: BookCar = {
+		carType,
+		pickUpLocation,
+		dropOffLocation,
+		pickUpDate,
+		dropOffDate,
+	};
 
-	// const carInfo: BookCar = {
-	// 	carType, pickUpLocation, dropOffLocation, pickUpDate, dropOffDate
-	// }
+	if (!carInfo) return;
 
-	// if (!carInfo) return;
-
-	//console.log(carInfo);
+	console.log(carInfo);
 }
 
 export function BookCar() {
