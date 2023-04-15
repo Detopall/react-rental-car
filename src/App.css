@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@500&display=swap");
 
 :root {
 	--text-gray: #706f7b;
@@ -266,7 +266,8 @@ nav ul li a:hover {
 .modal-container {
 	overflow-y: auto;
 	height: 80%;
-	background-color: #FFFFFF;
+	width: 80%;
+	background-color: #ffffff;
 	padding: 2rem;
 	border-radius: 0.5rem;
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
@@ -277,7 +278,6 @@ nav ul li a:hover {
 	color: white;
 	padding: 0.5rem;
 	display: flex;
-	gap: 20rem;
 	align-items: center;
 	justify-content: space-between;
 	border-radius: 0.5rem;
@@ -317,9 +317,27 @@ nav ul li a:hover {
 }
 
 .modal .body {
-	display: flex;
-	justify-content: center;
-	gap: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-auto-flow: row;
+	gap: 2rem 2rem;
+	grid-template-areas:
+		"modal-location-dates . modal-img"
+		".  personal-info .";
+	height: 70rem;
+}
+
+.personal-info {
+	grid-area: personal-info;
+}
+
+.modal-location-dates {
+	grid-area: modal-location-dates;
+}
+
+.modal-img {
+	grid-area: modal-img;
 }
 
 .modal-location-dates {
@@ -339,21 +357,96 @@ nav ul li a:hover {
 	color: #777;
 }
 
-.modal-location-dates-item h4, .modal-location-dates h3 {
+.modal-location-dates-item h4,
+.modal-location-dates h3 {
 	margin-bottom: 0;
 }
 
 .modal-img {
-	width: 30%;
-	height: 30%;
+	width: 80%;
+	height: 60%;
 }
 
 .modal-img h3 span {
-	color: var(--green)
+	color: var(--green);
 }
 
 .modal-img img {
 	width: 100%;
 	height: auto;
 	border-radius: 0.5rem;
+	object-fit: cover;
+}
+
+.personal-info {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-flow: row;
+	gap: 2rem 2rem;
+	border-radius: 0.5rem;
+	color: #777;
+	font-weight: bold;
+	grid-template-areas:
+		"personal-info-title personal-info-title"
+		"item-firstname item-lastname"
+		"item-phone-number item-age"
+		"item-email item-email"
+		"item-address item-address"
+		"item-city item-zip-code";
+}
+
+.personal-info-item {
+	display: flex;
+	align-items: flex-start;
+	flex-flow: column wrap;
+}
+
+.personal-info-item input {
+	width: 100%;
+	background-color: lightgrey;
+	border: none;
+	padding: 0.2rem;
+}
+
+.personal-info-item input:focus {
+	outline: none;
+}
+
+.personal-info-title {
+	grid-area: personal-info-title;
+	color: black;
+}
+
+.item-firstname {
+	grid-area: item-firstname;
+}
+
+.item-lastname {
+	grid-area: item-lastname;
+}
+
+.item-phone-number {
+	grid-area: item-phone-number;
+}
+
+.item-age {
+	grid-area: item-age;
+}
+
+.item-email {
+	grid-area: item-email;
+}
+
+.item-address {
+	grid-area: item-address;
+}
+
+.item-city {
+	grid-area: item-city;
+}
+
+.item-zip-code {
+	grid-area: item-zip-code;
 }
