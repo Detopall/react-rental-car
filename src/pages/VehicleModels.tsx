@@ -1,8 +1,14 @@
+import { useState } from "react";
+import { VehicleInfo } from "../components/VehicleInfo";
 
 
 export function VehicleModels() {
+
+	const [carName, setCarName] = useState("");
+
+
 	function changeStyle(e: React.MouseEvent<HTMLButtonElement>) {
-		console.log(e.target)
+		if (e.target === null) return;
 		const buttons = document.querySelectorAll(
 			".vehicle-models-buttons button"
 		);
@@ -10,8 +16,8 @@ export function VehicleModels() {
 			button.classList.remove("picked");
 		});
 		(e.target as HTMLButtonElement).classList.add("picked");
+		setCarName(e.currentTarget.innerText);
 	}
-
 	return (
 		<div className="vehicle-models-container">
 			<h2>Vehicle Models</h2>
@@ -29,6 +35,7 @@ export function VehicleModels() {
 					<button onClick={changeStyle}>Mustang</button>
 					<button onClick={changeStyle}>Volvo</button>
 				</div>
+				<VehicleInfo carName={carName} />
 			</div>
 		</div>
 	);
