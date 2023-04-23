@@ -89,7 +89,7 @@ export function VehicleInfo({ carName }: VehicleInfoProps) {
 								</div>
 							);
 						})}
-						<a href="#book-car">Book now</a>
+						<a href="/#book-car">Book now</a>
 					</div>
 				</div>
 			)}
