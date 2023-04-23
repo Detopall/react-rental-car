@@ -1,4 +1,4 @@
-import Modal from "./Modal";
+import Modal from "./Modal/Modal";
 import { useState } from "react";
 
 export interface IBookCar {
@@ -22,8 +22,8 @@ export function BookCar() {
 		pickUpLocation: "",
 		dropOffLocation: "",
 		pickUpDate: "",
-		dropOffDate: ""
-	  });
+		dropOffDate: "",
+	});
 
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		if (e) e.preventDefault();
@@ -62,10 +62,8 @@ export function BookCar() {
 				<h2> Book a car</h2>
 				<form onSubmit={handleSubmit}>
 					<div className="book-form car-type">
-						<label htmlFor="select-car-type">
-							Select Your Car
-						</label>
-						<select id="select-car-type" required >
+						<label htmlFor="select-car-type">Select Your Car</label>
+						<select id="select-car-type" required>
 							<option value="">Select your car type</option>
 							<option value="BMW">BMW</option>
 							<option value="Chevrolet">Chevrolet</option>
@@ -119,7 +117,12 @@ export function BookCar() {
 					</div>
 				</form>
 			</section>
-			{openModal && <Modal carInfo={carInfo} closeModal={() => setOpenModal(false)} />}
+			{openModal && (
+				<Modal
+					carInfo={carInfo}
+					closeModal={() => setOpenModal(false)}
+				/>
+			)}
 		</>
 	);
 }
