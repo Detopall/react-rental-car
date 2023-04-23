@@ -9,54 +9,54 @@ interface Vehicle {
 	doors: number;
 	transmission: string;
 	fuel: string;
-	price: number;
+	price: string;
 }
 
 const VehicleDescription: Record<string, Vehicle> = {
 	bmw: {
+		price: "$43/day",
 		model: "E30",
 		year: 1989,
 		seats: 5,
 		doors: 2,
 		transmission: "5-speed manual",
 		fuel: "Diesel",
-		price: 45,
 	},
 	chevrolet: {
+		price: "$32/day",
 		model: "Corvair",
 		year: 1965,
 		seats: 5,
 		doors: 2,
 		transmission: "4-speed manual",
 		fuel: "Gasoline",
-		price: 35,
 	},
 	mercedes: {
+		price: "$53/day",
 		model: "Mercedes-Benz 500 SE",
 		year: 1985,
 		seats: 5,
 		doors: 4,
 		transmission: "5-speed automatic",
 		fuel: "Diesel",
-		price: 60,
 	},
 	mustang: {
+		price: "$60/day",
 		model: "Hardtop",
 		year: 1970,
 		seats: 2,
 		doors: 2,
 		transmission: "4-speed manual",
 		fuel: "Gasoline",
-		price: 38,
 	},
 	volvo: {
+		price: "$24/day",
 		model: "700 sedan",
 		year: 1986,
 		seats: 5,
 		doors: 4,
 		transmission: "5-speed manual",
 		fuel: "Diesel",
-		price: 25,
 	},
 };
 
@@ -80,11 +80,16 @@ export function VehicleInfo({ carName }: VehicleInfoProps) {
 									className="vehicle-description-item"
 									key={key}
 								>
-									<h4>{key}</h4>
-									<span>{value}</span>
+									<span className="vehicle-item-key">
+										{key}
+									</span>
+									<span className="vehicle-item-value">
+										{value}
+									</span>
 								</div>
 							);
 						})}
+						<a href="#book-car">Book now</a>
 					</div>
 				</div>
 			)}

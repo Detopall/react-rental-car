@@ -9,7 +9,8 @@ function Hero() {
 			<div className="hero-content">
 				<div className="hero-content-text">
 					<h4>
-						Choose <span className="hero-for-you"> your </span>  next car
+						Choose <span className="hero-for-you"> your </span> next
+						car
 					</h4>
 					<p>
 						Rent your next car now. Predictable prices, flexible
@@ -17,7 +18,7 @@ function Hero() {
 					</p>
 
 					<div className="hero-buttons">
-						<a href="#book-a-ride">Book a car</a>
+						<a href="#book-car">Book a car</a>
 						<a href="#">Learn more</a>
 					</div>
 				</div>

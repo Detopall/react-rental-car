@@ -58,7 +58,7 @@ export function BookCar() {
 
 	return (
 		<>
-			<section className="book-a-car">
+			<section className="book-a-car" id="book-car">
 				<h2> Book a car</h2>
 				<form onSubmit={handleSubmit}>
 					<div className="book-form car-type">
