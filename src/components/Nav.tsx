@@ -9,9 +9,6 @@ function Nav() {
 						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<Link to="/about">About</Link>
-					</li>
-					<li>
 						<Link to="/vehicle-models">VehicleModels</Link>
 					</li>
 					<li>
@@ -22,6 +19,9 @@ function Nav() {
 					</li>
 					<li>
 						<Link to="/contact">Contact</Link>
+					</li>
+					<li>
+						<Link to="/about">About</Link>
 					</li>
 				</ul>
 			</nav>

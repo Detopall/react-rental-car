@@ -45,7 +45,7 @@
 	align-items: center;
 	position: relative;
 	margin-left: 5rem;
-	margin-top: -10rem;
+	margin-top: 10rem;
 }
 
 .hero-content-text {
@@ -69,7 +69,7 @@
 	font-weight: bold;
 	color: black;
 	margin-bottom: 2.3rem;
-	text-shadow: 0.1rem 0.1rem 0.15rem black;
+	text-shadow: 0.1rem 0.1rem 0.15rem white;
 }
 
 .hero-for-you {
@@ -466,7 +466,7 @@ nav ul li a:hover {
 
 .vehicle-models-container h2 {
 	text-align: center;
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 .vehicle-models-container p {
@@ -565,4 +565,48 @@ nav ul li a:hover {
 .vehicle-description-item:nth-of-type(1) {
 	background-color: var(--green);
 	color: white;
+}
+
+.customer-stories {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	width: 70%;
+}
+
+.customer-stories-description {
+	color: #777;
+}
+
+.customer-stories h2 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.customer-testimonials-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow-y: auto;
+	height: 20rem;
+	padding: 2rem;
+	margin-bottom: 5rem;
+}
+
+.customer-testimonial {
+	width: 100%;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.12),
+		0 0.1rem 0.15rem rgba(0, 0, 0, 0.24);
+}
+
+.testimonials-name {
+	display: block;
+	font-weight: bold;
+	margin-top: 1rem;
+	font-style: italic;
+	text-align: right;
+	color: #777;
 }

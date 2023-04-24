@@ -14,11 +14,11 @@ function App() {
 			<Nav />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
 				<Route path="/vehicle-models" element={<VehicleModels />} />
 				<Route path="/customer-stories" element={<CustomerStories />} />
 				<Route path="/team" element={<Team />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/about" element={<About />} />
 			</Routes>
 		</div>
 	);
