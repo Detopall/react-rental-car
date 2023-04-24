@@ -5,6 +5,10 @@
 	--green: rgb(13, 187, 13);
 }
 
+body {
+	background-color: #f8f8f8;
+}
+
 * {
 	font-family: "Poppins", sans-serif;
 	scrollbar-color: var(--green) white;
@@ -19,8 +23,9 @@
 	flex-flow: column;
 	z-index: 0;
 	margin-top: -1rem;
-	background-color: #f8f8f8;
 }
+
+/* hero + nav */
 
 .hero {
 	width: 100%;
@@ -160,6 +165,8 @@ nav ul li a:hover {
 	color: var(--green);
 }
 
+/* book a car section */
+
 .book-a-car {
 	margin-top: 2.5rem;
 	padding: 2rem;
@@ -253,6 +260,8 @@ nav ul li a:hover {
 .book-form.car-submit button:hover {
 	box-shadow: 0.4rem 0.4rem 0.4rem 0 rgba(20, 180, 15, 0.5);
 }
+
+/* Modal */
 
 .modal {
 	display: flex;
@@ -456,6 +465,8 @@ nav ul li a:hover {
 	grid-area: item-zip-code;
 }
 
+/* Vehicle Models */
+
 .vehicle-models-container {
 	display: flex;
 	justify-content: center;
@@ -567,6 +578,8 @@ nav ul li a:hover {
 	color: white;
 }
 
+/* Customer Stories */
+
 .customer-stories {
 	display: flex;
 	justify-content: center;
@@ -609,4 +622,37 @@ nav ul li a:hover {
 	font-style: italic;
 	text-align: right;
 	color: #777;
+}
+
+/* Team */
+
+.team-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.team-container h2 {
+	font-size: 3rem;
+}
+
+.team-container-description {
+	color: #777;
+}
+
+.team-members {
+	display: flex;
+	gap: 5rem;
+}
+
+.team-member {
+	box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.08);
+	width: 10rem;
+	padding: 2rem;
+}
+
+.team-member img {
+	width: 100%;
+	border: 0.1rem solid black;
 }

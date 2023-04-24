@@ -13,11 +13,13 @@ export function CustomerStories() {
 				<div className="customer-testimonial">
 					<p>
 						I was looking for a car for my son's graduation, and I
-						found the perfect one at Vintage Car Rental. The car was in
-						excellent condition, and the price was reasonable. I
-						would recommend Vintage Car Rental to anyone looking for a
-						classic car.
-						<span className="testimonials-name"> Liam Patel - BMW </span>
+						found the perfect one at Vintage Car Rental. The car was
+						in excellent condition, and the price was reasonable. I
+						would recommend Vintage Car Rental to anyone looking for
+						a classic car.
+						<span className="testimonials-name">
+							Liam Patel - BMW
+						</span>
 					</p>
 				</div>
 				<div className="customer-testimonial">
@@ -29,7 +31,9 @@ export function CustomerStories() {
 						seamless. I highly recommend Vintage Car Rental to
 						anyone looking to add a touch of class to their special
 						day
-						<span className="testimonials-name"> Isabella Garcia - Mercedes </span>
+						<span className="testimonials-name">
+							Isabella Garcia - Mercedes
+						</span>
 					</p>
 				</div>
 				<div className="customer-testimonial">
@@ -40,7 +44,9 @@ export function CustomerStories() {
 						beyond to make sure I have everything I need and that my
 						rental experience is top-notch. I won't rent from anyone
 						else!
-						<span className="testimonials-name"> Aiden Nguyen - Mustang </span>
+						<span className="testimonials-name">
+							Aiden Nguyen - Mustang
+						</span>
 					</p>
 				</div>
 				<div className="customer-testimonial">
@@ -50,7 +56,9 @@ export function CustomerStories() {
 						great condition, the rates are reasonable, and the staff
 						is knowledgeable and helpful. I've recommended Vintage
 						Car Rental to all my friends and family!
-						<span className="testimonials-name"> Ava Robinson - Volvo </span>
+						<span className="testimonials-name">
+							Ava Robinson - Volvo
+						</span>
 					</p>
 				</div>
 				<div className="customer-testimonial">
@@ -61,7 +69,9 @@ export function CustomerStories() {
 						went out of their way to make sure the car was delivered
 						to his doorstep on time. My dad was thrilled and it made
 						for a truly special day. Thank you, Vintage Car Rental!
-						<span className="testimonials-name"> Benjamin Miller - Mustang </span>
+						<span className="testimonials-name">
+							Benjamin Miller - Mustang
+						</span>
 					</p>
 				</div>
 
@@ -73,7 +83,9 @@ export function CustomerStories() {
 						I had everything I needed to get the shots I wanted and
 						the car looked stunning in the final photos. I highly
 						recommend Vintage Car Rental for any creative project!
-						<span className="testimonials-name"> Sophia Brown - Chevrolet </span>
+						<span className="testimonials-name">
+							Sophia Brown - Chevrolet
+						</span>
 					</p>
 				</div>
 			</div>
