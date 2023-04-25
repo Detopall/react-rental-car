@@ -5,8 +5,8 @@ export default function Footer() {
 				<div className="footer-top-left">
 					<h2>Vintage Car Rental</h2>
 					<p>
-						We are a company that rents out vintage cars for events and
-						special occasions.
+						We are a company that rents out vintage cars for events
+						and special occasions.
 					</p>
 				</div>
 				<div className="footer-top-right">
