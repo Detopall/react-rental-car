@@ -7,6 +7,7 @@
 
 body {
 	background-color: #f8f8f8;
+	margin: 0;
 }
 
 * {
@@ -133,8 +134,8 @@ body {
 }
 
 nav img {
-	width: 3rem;
-	border-radius: 50%;
+	width: 10rem;
+	border-radius: 1rem;
 }
 
 nav ul {
@@ -144,10 +145,6 @@ nav ul {
 	align-items: center;
 	margin-top: 2rem;
 	flex-flow: row wrap;
-}
-
-nav ul li {
-	margin: 1.5rem;
 }
 
 nav ul li a {
@@ -661,4 +658,108 @@ nav ul li a:hover {
 .team-member img {
 	width: 100%;
 	border: 0.1rem solid black;
+}
+
+.contact-container {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+}
+
+.contact-container h2 {
+	font-size: 3rem;
+}
+
+.contact-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.contact-container form label {
+	font-weight: bold;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+	border-radius: 0.5rem;
+	border: none;
+	background-color: lightgrey;
+	height: 2rem;
+}
+
+.contact-container form button {
+	width: 20%;
+	border: none;
+	background-color: var(--green);
+	border-radius: 0.5rem;
+	color: white;
+	padding: 0.5rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+	box-shadow: 0.4rem 0.4rem 0.4rem 0 rgba(13, 187, 13, 0.2);
+}
+
+.contact-container form button:hover {
+	background-color: lightgreen;
+}
+
+/* About */
+
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	width: 70%;
+}
+
+
+
+/* Footer */
+
+footer {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	text-align: center;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.footer-top-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+}
+
+.footer-top-right ul {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.footer-top-right ul a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.footer-top-right ul a:hover {
+	color: var(--green);
+}
+
+.footer-container li {
+	list-style-type: none;
 }
